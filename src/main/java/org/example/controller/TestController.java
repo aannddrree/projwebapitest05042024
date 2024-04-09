@@ -21,5 +21,11 @@ public class TestController {
     public List<Product> getProduct(){
         return new ProductService().getProduct();
     }
+
+    @CrossOrigin
+    @RequestMapping("/add")
+    public Product add(Product product){
+        return new ProductService().add(product);
+    }
 }
 

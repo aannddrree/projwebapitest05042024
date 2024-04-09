@@ -25,4 +25,9 @@ public class ProductService {
 
         return lst;
     }
+
+    public Product add(Product product){
+        lst.add(product);
+        return product;
+    }
 }
