@@ -7,11 +7,8 @@ import java.util.List;
 
 @Service
 public class QuestionsServices {
-
-        List<Questions> lst = new ArrayList<>();
-
-        public List<Questions> getQuestions(){
-
+    public List<Questions> getQuestions(){
+            List<Questions> lst = new ArrayList<>();
             lst.add(new Questions(1, "A equipe de desenvolvimento conclui todas as tarefas planejadas."));
             lst.add(new Questions(2, "Um membro da equipe encontra um obstáculo inesperado que atrasa o progresso."));
             lst.add(new Questions(3, "O Product Owner solicita uma mudança de requisitos durante a sprint."));
@@ -47,11 +44,8 @@ public class QuestionsServices {
         }
 
         public Questions getQuestion(){
-
-            List<Questions> lstQuestion = getQuestions();
             int randomNumber = (int) (Math.random() * 30) + 1;
-
-            for (Questions question : lstQuestion){
+            for (Questions question : this.getQuestions()){
                 if (question.getId() == randomNumber) {
                     return question;
                 }

@@ -2,8 +2,6 @@ package org.example.model;
 
 public class Questions {
 
-
-
     public Questions(){}
 
     public  Questions(int id, String description){
