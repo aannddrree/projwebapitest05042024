@@ -1,15 +1,16 @@
 package org.example.model;
 
-public class Product {
+public class Item {
 
+    private int id;
+    private String name;
 
-    public Product(){}
-    public Product(int id, String name){
+    public Item(int id, String name){
         this.id = id;
         this.name = name;
     }
-    private int id;
-    private String name;
+
+    public Item(){}
 
     public int getId() {
         return id;
@@ -19,11 +20,11 @@ public class Product {
         this.id = id;
     }
 
-    public String getDescription() {
+    public String getName() {
         return name;
     }
 
-    public void setDescription(String name) {
+    public void setName(String name) {
         this.name = name;
     }
 }
